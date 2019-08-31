@@ -1,0 +1,2 @@
+- name: github-actions-nodejs
+  uses: thonatos/github-actions-nodejs@v0.1.1
