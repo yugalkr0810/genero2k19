@@ -5,10 +5,25 @@ mongoose.Promise = global.Promise;
 const url = process.env.url;
 mongoose.connect(url);
 var per_info = new mongoose.Schema({
+    gid: String,
     name: String,
     email: String,
     mobile : String,
-    balance: String
+    college : String,
+    year : String,
+    course : String,
+    branch : String,
+    event: {
+        type: {String}
+    },
+    user : String,
+    txnid : String,
+    txndate : String
 });
+
+
 var User = mongoose.model("User", per_info);
 module.exports = User;
+
+
+

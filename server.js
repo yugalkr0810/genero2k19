@@ -1,19 +1,14 @@
-
-const dotenv = require('dotenv');
-dotenv.config();
-//const port = 8080;
-const port = process.env.PORT;
-var impo = require('./asset');
-var User = require('./db');
-var qr = require('qr-image'); 
-
 const express = require('express');
+const server  = express();
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const server  = express();
+server.use(bodyParser.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
-server.use(bodyParser.urlencoded({ extended: true })); 
 server.use(session({secret: "whatever"}));
+var impo = require('./model/admin');
+const dotenv = require('dotenv');
+dotenv.config();
+const port = process.env.PORT;
 
 
 server.listen(port,()=>
@@ -23,37 +18,37 @@ server.listen(port,()=>
 
 server.get('/',function(req,res)
 {
-    res.sendfile('form.html');
+    res.sendfile('./views/login.html');
+});
+
+server.post('/login',function(req,res)
+{   
+    impo.login(req,res);
+});
+
+server.get('/login',function(req,res)
+{   
+    req.body["username"] =  req.session.sess_admin_info;
+    req.body["password"] =  req.session.sess_admin_pass;
+    impo.login(req,res);
 });
 
 
-
-server.post('/register', function(req, res) {
-    impo.InitPayment(req,res);
-}); 
-
-server.post('/callback', function(req,res){
-	
-    info = Object.assign({}, req.session.sess_per_info, req.body);
-    if(info.STATUS=="TXN_SUCCESS"){
-    var myData = new User(info);
-    myData.save()
-        .then(item => {
-            //res.send("Name saved to database");
-
-        var code = qr.image(JSON.stringify(info), { type: 'svg' });
-        res.type('svg');
-        code.pipe(res);
-        })
-        .catch(err => {
-            res.status(400).send("Unable to save to database");
-        });
+server.post('/register',function(req,res)
+{   
+    if(!('event' in req.body)){
+        var doc = [req.session.sess_admin_info]
+        res.render('home',{doc:doc});
     }
-    else {
-        res.send("error");
+    else{
+        impo.register(req,res);
     }
-    req.session.destroy();
     
 });
 
-
+server.get('/signout',function(req,res)
+{   
+    req.session.destroy();
+    delete req.body;
+    res.sendfile('./views/login.html');
+});
