@@ -52,3 +52,13 @@ server.get('/signout',function(req,res)
     delete req.body;
     res.sendfile('./views/login.html');
 });
+
+server.post('/search',function(req,res)
+{   
+    impo.search(req,res);
+});
+
+server.post('/attend',function(req,res)
+{   
+    impo.attend(req,res);
+});

@@ -14,11 +14,12 @@ var per_info = new mongoose.Schema({
     course : String,
     branch : String,
     event: {
-        type: {String}
+        type: {String:String}
     },
     user : String,
     txnid : String,
-    txndate : String
+    txndate : String,
+    no_events : String
 });
 
 

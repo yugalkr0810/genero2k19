@@ -7,27 +7,16 @@ const Cryptr = require('cryptr');
 const cryptr = new Cryptr('myTotalySecretKey');
 
 var mail = function(req){
-    var data = [req.gid,req.name];
-    var count = 0;
-	if((JSON.stringify(req.event)).includes(",")){
-		count=1;
-	}
-		if(count==0){
-			var str = JSON.stringify(req.event);
-            data.push(str);
-		}
-		else
-		{
-			for(var key in req.event){
-				if(req.event.hasOwnProperty(key)){
-					var str = JSON.stringify(req.event[key]);
-                    data.push(str);
-				}
-			}
+  //console.log(req)
+    var qr_data = {
+      gid: req.gid,
+      name : req.name,
+      event : req.event
+    };
 			
-		}
-    
-    const hash = cryptr.encrypt(data);
+		
+    console.log(qr_data)
+    const hash = cryptr.encrypt(qr_data);
     // const unhash = cryptr.decrypt(hash);
     // console.log(unhash)
 var qr_png = qr.image(JSON.stringify(hash), { type: 'png' });
