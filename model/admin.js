@@ -122,9 +122,25 @@ var attend = function(req,res){
       for (var i in req.body.check){
         var up = (req.body.check[i]);
         console.log([doc[key].event[up]])
-        User.updateOne({[doc[key].event[up]]: "0" }, {$set : {[doc[key].event[up]]: "1"}}, (err, item) => {
-          console.log(item)
-        })
+        
+        
+      /* doc[key].event[up] = "1"
+        doc[key].save()
+        .then(item => {
+                        
+            res.send(doc[key])
+						
+					
+					})
+					.catch(err => {
+            res.send(doc[key])
+					}); */
+       /* User.updateOne({gid: req.body.gid   }, {$set : {[doc[key].event[up]]: "1"}}, (err, item) => {
+          if (err) {
+            console.log("Something wrong when updating data!");
+        }
+        res.send(item);
+    }); */
         //console.log([doc[key].event[up]])
       /*User.findOneAndUpdate({gid: req.body.gid}, {$set:{[doc[key].event[up]]: "1"}}, {new: true}, (err, doc) => {
         if (err) {
