@@ -16,7 +16,10 @@ server.listen(port,()=>
     console.log("server is working");
 });
 
-server.get('/',function(req,res)
+
+//ADMIN
+
+server.get('/admin',function(req,res)
 {
     res.sendfile('./views/login.html');
 });
@@ -61,4 +64,153 @@ server.post('/search',function(req,res)
 server.post('/attend',function(req,res)
 {   
     impo.attend(req,res);
+});
+
+server.get('/search_res',function(req,res)
+{   
+    var doc = {
+    user : req.session.sess_admin_info,
+    password : req.session.sess_admin_pass
+    }
+    console.log(req.body)
+    res.render('search_res', {doc : doc});
+});
+
+
+//USER
+
+server.get('/',function(req,res)
+{
+    res.sendfile('./views/user/index.html');
+});
+
+server.get('/style.css',function(req,res)
+{
+    res.sendfile('./views/user/style.css');
+});
+
+//HEAD
+
+server.get('/style1.css',function(req,res)
+{
+    res.sendfile('./views/user/style1.css');
+});
+
+server.get('/assets/fonts/stylesheet.css',function(req,res)
+{
+    res.sendfile('./views/user/assets/fonts/stylesheet.css');
+});
+
+server.get('/assets/css/home.css',function(req,res)
+{
+    res.sendfile('./views/user/assets/css/home.css');
+});
+
+server.get('/assets/css/home.css',function(req,res)
+{
+    res.sendfile('./views/user/assets/css/mediaquery.css');
+});
+
+server.get('/assets/css/navbar.css',function(req,res)
+{
+    res.sendfile('./views/user/assets/css/navbar.css');
+});
+
+//01
+
+server.get('/assets/img/logo.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/logo.png');
+});
+
+server.get('/assets/img/facebook.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/facebook.png');
+});
+
+server.get('/assets/img/instagram.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/instagram.png');
+});
+
+server.get('/assets/img/marvel-wallpaper-avengers.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/marvel-wallpaper-avengers.png');
+});
+
+server.get('/assets/img/mob-grid-logo.jpg',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/mob-grid-logo.jpg');
+});
+
+server.get('/assets/img/scroll.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/scroll.png');
+});
+
+server.get('/assets/img/dots.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/dots.png');
+});
+
+server.get('/assets/img/01.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/01.png');
+});
+
+server.get('/assets/img/scroll-big.png',function(req,res)
+{
+    res.sendfile('./views/user/assets/img/scroll-big.png');
+});
+
+
+//02
+
+server.get('/cpt.png',function(req,res)
+{
+    res.sendfile('./views/user/cpt.png');
+});
+
+//03
+
+server.get('/Group%20162.png',function(req,res)
+{
+    res.sendfile('./views/user/Group%20162.png');
+});
+
+
+//04
+
+server.get('/thor.png',function(req,res)
+{
+    res.sendfile('./views/user/thor.png');
+});
+
+//05
+
+server.get('/ola.jpg',function(req,res)
+{
+    res.sendfile('./views/user/ola.jpg');
+});
+
+server.get('/Aptron.png',function(req,res)
+{
+    res.sendfile('./views/user/Aptron.png');
+});
+
+server.get('/sopra.png',function(req,res)
+{
+    res.sendfile('./views/user/sopra.png');
+});
+
+server.get('/oyo.jpg',function(req,res)
+{
+    res.sendfile('./views/user/oyo.jpg');
+});
+
+//FOOTER
+
+server.get('/black-logo.png',function(req,res)
+{
+    res.sendfile('./views/user/black-logo.png');
 });

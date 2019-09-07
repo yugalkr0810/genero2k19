@@ -111,51 +111,75 @@ var search = function(req,res){
 }
 
 
+// var attend = function(req,res){
+//   User
+//     .find({
+//       gid: req.body.gid     
+//     })
+//     .then(doc => {
+//       for( var key in doc) {
+//       //HAVE TO BE UPDATED HERE
+//       for (var i in req.body.check){
+//         var up = (req.body.check[i]);
+//         //console.log(doc[key].event)
+//          var x = doc[key].event[up];
+//         // var query = { gid: req.body.gid  };
+//          var up_val = {[up]:"1"}
+//          var eve = {event:{}}
+//         eve.event = Object.assign({}, doc[key].event , up_val);
+//         // console.log(eve)
+//          delete doc[key].event;
+//         // console.log(doc[key])
+//          doc[key] = Object.assign({}, doc[key], eve);
+//          res.send(doc[key])
+//          //console.log(doc[key].event)
+//         // console.log(doc[key])
+//         // doc[key].save
+//         // res.send(doc[key])
+//        /* User.updateOne({gid: req.body.gid   }, {$set : {[doc[key].event[up]]: "1"}}, (err, item) => {
+//           if (err) {
+//             console.log("Something wrong when updating data!");
+//         }
+//         res.send(item);
+//     }); */
+//         //console.log([doc[key].event[up]])
+//       /*User.findOneAndUpdate({gid: req.body.gid}, {$set:{[doc[key].event[up]]: "1"}}, {new: true}, (err, doc) => {
+//         if (err) {
+//             console.log("Something wrong when updating data!");
+//         }
+//         res.send(doc);
+//     });*/
+//     }
+//   }
+      
+//       //res.render('search_res',{doc: doc});
+//     })
+//     .catch(err => {
+//       console.error(err)
+//     })
+// } 
+
 var attend = function(req,res){
   User
-    .find({
-      gid: req.body.gid     
-    })
-    .then(doc => {
-      for( var key in doc) {
-      //HAVE TO BE UPDATED HERE
-      for (var i in req.body.check){
-        var up = (req.body.check[i]);
-        console.log([doc[key].event[up]])
-        
-        
-      /* doc[key].event[up] = "1"
-        doc[key].save()
-        .then(item => {
-                        
-            res.send(doc[key])
-						
-					
-					})
-					.catch(err => {
-            res.send(doc[key])
-					}); */
-       /* User.updateOne({gid: req.body.gid   }, {$set : {[doc[key].event[up]]: "1"}}, (err, item) => {
-          if (err) {
-            console.log("Something wrong when updating data!");
-        }
-        res.send(item);
-    }); */
-        //console.log([doc[key].event[up]])
-      /*User.findOneAndUpdate({gid: req.body.gid}, {$set:{[doc[key].event[up]]: "1"}}, {new: true}, (err, doc) => {
-        if (err) {
-            console.log("Something wrong when updating data!");
-        }
-        res.send(doc);
-    });*/
-    }
-  }
-      
-      //res.render('search_res',{doc: doc});
-    })
-    .catch(err => {
-      console.error(err)
-    })
+  .find({
+    gid: req.body.gid     
+  })
+  .then(doc => {
+      var to_update = { [req.body.check] : "1"}
+      var eve = {}
+      eve = Object.assign({}, doc[0].event , to_update);
+     User.updateOne({gid: req.body.gid   }, {$set : {  event : eve }}, (err, item) => {
+                if (err) {
+                  console.log("Something wrong when updating data!");
+              }
+              
+              res.redirect("/login?status=attended");
+          });
+     
+  })
+  .catch(err => {
+    console.error(err)
+  })
 }
 
 module.exports = {login: login, register: register, search: search, attend: attend};

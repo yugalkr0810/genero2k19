@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'BadaBoom BB';
+  src: url(../fonts/brandon_reg-webfont.ttf),
+  	   url(../fonts/BADABB_),	
+       url(../fonts/brandon_reg-webfontfontlocation.otf),
+       url(../fonts/brandon_reg-webfontfontlocation.woff),
+       url(../fonts/brandon_reg-webfontfontlocation.woff2);
+}
+
+.navbar-nav li{
+	font-family: 'Montserrat', Regular;
+	font-weight: bold;
+	padding-right: 1.3rem;
+}
+
+.navbar-brand {
+	margin-left: 1%;
+	margin-top: 0.5%;
+}
+
+.section1 {
+	position: relative;
+	z-index: 1;
+	height: 100vh;
+	display: flex;
+  	flex-wrap: nowrap;
+}
+
+.sec1a{
+	z-index: 1;
+	text-align: center;
+	background-color: #F1C07F;
+}
+
+.gc {
+	margin-top: 19vh;
+	display: inline-block;
+}
+
+.gen19 {
+	font-size: 75px;
+	font-family: 'BadaBoom BB', cursive;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: 1;
+	margin-bottom: -1.5rem;
+}
+.comicon {
+	text-align: left;
+	font-size: 45px;
+	font-family: 'BadaBoom BB', Regular;
+	letter-spacing: 8px;
+	color: #000000;
+	opacity: 1;
+}
+
+.fb {
+	margin-top: 18vh;
+	float: left;
+}
+
+.facebook{
+	margin-left: 100%;
+}
+
+.insta {
+	margin-top: 35vh;
+	float: left;
+}
+
+.marvel-wallpaper{
+	margin-top: 2%;
+	margin-left: 4vw;
+	width: 135%;
+	height: 30%;
+}
+
+.sec1b{
+	position: sticky;
+	z-index: 0;
+	width: 35%;
+	background-color: #A7A7A7;
+}
+
+.dots {
+	margin-left: 65%;
+	margin-top: 30%;
+}
+
+.scroll-big{
+	margin-left: 2%;
+}
+
+.num1 {
+	width: 25%;
+	margin-top: 15%;
+	margin-left: 60%;
+}
+
+.btn {
+	z-index: 1;
+	font-size: 1.3vw;
+	width: 15vw;
+	height: 7vh;
+	margin-top: 5vh;
+	float: right;
+	margin-right: 10%;
+	background: #FFFFFF no-repeat;
+	border-radius: 40px;
+	opacity: 100%;
+	box-shadow: 0 15px 15px grey;
+	}	
+
+
+.section2 {
+	height: 100vh;
+	background-color: #d01f00;
+}
+
+.abtgen {
+    
+}
+
+.cptamc {
+	
+}
+
+.clippy {
+	
+}

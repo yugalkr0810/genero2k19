@@ -7,19 +7,18 @@ const Cryptr = require('cryptr');
 const cryptr = new Cryptr('myTotalySecretKey');
 
 var mail = function(req){
-  //console.log(req)
     var qr_data = {
       gid: req.gid,
       name : req.name,
-      event : req.event
+      event : req.event,
+      email : req.email
     };
 			
 		
-    console.log(qr_data)
-    const hash = cryptr.encrypt(qr_data);
+    //const hash = cryptr.encrypt(qr_data);
     // const unhash = cryptr.decrypt(hash);
-    // console.log(unhash)
-var qr_png = qr.image(JSON.stringify(hash), { type: 'png' });
+    
+var qr_png = qr.image(JSON.stringify(qr_data), { type: 'png' });
 qr_png.pipe(fs.createWriteStream('./qrcode/'+req.gid+'.png'));
  
 //var svg_string = qr.imageSync(req.gid+'.png', { type: 'png' });
@@ -52,7 +51,7 @@ transporter.sendMail(mailOptions, function(error, info){
    // console.log(error);
    
   } else {
-    //console.log('Email sent: ' + info.response);
+    console.log('Email sent: ' + info.response);
     
   }
 }); 

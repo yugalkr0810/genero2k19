@@ -1,0 +1,182 @@
+
+@media only screen and (min-width: 768px) {
+	.mob-logo {
+		display: none;
+	}
+
+	.mobbtn {
+		display: none;
+	}
+
+	.mob-grid-logo {
+		display: none;
+	}
+
+	.scroll-img {
+		display: none;
+	}
+
+} 
+
+/*
+@media (min-width: 481px) and (max-width: 767px) {
+	
+	nav {
+		display: none;
+	}
+
+	.mob-logo {
+		margin-left: 10vw;
+		margin-top: 20vh;
+		width: 25vw;
+	}
+
+	.gc {
+		margin-left: 20%;
+		margin-top: 5vh;
+	}
+
+	.gen19 {
+		font-size: 45px;
+	}
+
+	.comicon {
+		font-size: 30px;
+	}
+	
+	
+ 	.marvel-wallpaper {
+ 		margin-top: 1vh;
+ 	    width: 250%;
+	}
+ 
+ .marvel {
+ 	    overflow: hidden;
+ 	    direction: rtl;
+ 	  	width: 145%;
+ 	  	height: 145vh;
+
+		margin-left: 0;
+		padding-left: 0;
+ }	
+
+} */
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+	.navbar {
+		display: none;
+	}
+	
+	.mob-logo {
+		float: right;
+		margin-right: 15%;
+		margin-top: 8vh;
+		width: 20vw;
+	}
+
+
+	.section1 {
+		height: 100vh;
+		
+	}
+
+	.gc {
+		margin-left: 30%;
+		margin-top: 20%;
+	}
+
+	.gen19 {
+		font-family: 'BadaBoom BB', cursive;
+		font-size: 53px;
+	}
+
+	.comicon {
+		font-family: 'BadaBoom BB', cursive;
+		letter-spacing: 3px;
+		font-size: 30px;
+	}
+
+	.col-md-7, .col-md-5, .col-sm-7, .col-sm-5 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.btn {
+		display: none;
+	}
+
+	.dots {
+		display: none;
+	}
+
+	.facebook {
+		display: none;
+	}
+
+	.instagram {
+		display: none;
+	}
+
+	.num1 {
+		display: none;
+	}
+
+	.scroll-big {
+		display: none;
+	}
+
+
+	.mobbtn {
+		float: right;
+		font-size: 2vw;
+		width: 55%;
+		height: 5vh;
+		margin-top: 10%;
+		margin-right: 2%;
+		background: #FFFFFF no-repeat;
+		border-radius: 30px;
+		opacity: 1;
+		box-shadow: 0 1px 1px grey;
+	}
+
+	.mob-grid-logo {
+		width: 22vw;
+		height: 25vh;
+		margin-left: 10%;
+		margin-top: 40vh;
+	}
+
+	.scroll-img {
+		width: 6.4vw;
+		margin-top: 15%;
+		float: right;
+	}
+	
+ 	.marvel-wallpaper {
+ 		vertical-align: bottom;
+ 		margin-top: 0;
+ 	    width: 230%;
+	}
+ 
+	.marvel {
+	 	    overflow: hidden;
+	 	    direction: rtl;
+	 	  	width: 125%;
+
+			margin-left: 0;
+			padding-left: 0;
+	 }	
+
+}
+
+
+@media (min-width: 0px) and (max-width: 400px) {
+
+}

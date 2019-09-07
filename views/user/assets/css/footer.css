@@ -1,0 +1,37 @@
+.page-footer {
+	background-color: black;
+}
+
+.col-md-4 {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.fas {
+	margin-right: 10px;
+}
+
+.fa-link {
+	margin-top: 8%;
+}
+
+li {
+	margin-bottom: 4%;
+}
+
+.blogo {
+	margin-bottom: 3%;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 100px;
+  margin-left: 6%;
+}
+
+.col-md-8 {
+	margin-bottom: 3%;
+}
+
+.ll{
+	margin-left: 20%;
+}

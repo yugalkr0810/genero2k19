@@ -1,0 +1,484 @@
+@media (min-width: 992px) { 
+@font-face{
+	font-family: Etna;
+	src:url("etna.otf");
+}
+@font-face{
+	font-family: Brandon Grotesque;
+	src:url("Brandon.otf");
+}
+
+#cpt123{
+	background-color: #d01f00;
+}
+
+.thor2{
+	margin-left: 0;
+	margin-right: 0;
+	   background-color: #006FFF;
+	   width: 100%;
+	   position: relative;
+	   z-index: 0;
+	}
+
+h1{
+	color: white;
+	text-align: left;
+	letter-spacing: 0px;
+	font-family: Etna;
+	margin-top: 198px;
+	margin-left: 109px;
+	z-index: -1;
+	font-size: 50px;
+	position: relative;
+	}
+p{
+	color: white;
+	font-size: 16px;
+	font-family: Brandon Grotesque;
+	margin-left: 109px;
+	margin-top: 73px;
+	margin-bottom: 73px;
+	z-index: -1;
+	position: relative;
+
+
+	}
+button{
+	border-style: none;
+	background-color: white;
+	box-shadow: 0px 3px 54px #00000061;
+	border-radius: 51px;
+	padding: 25px 100px;
+	margin-left:109px;
+	overflow: auto;
+	z-index: -1;
+	position: relative;
+	}
+
+a{
+	text-decoration: none;
+	border-radius: 40px;
+	font-size: 16px;
+	background-color: white;
+	color: black;
+	overflow: auto;
+	font-family: Etna;
+	src:url("etna.otf");
+	position: relative;
+
+	}
+a:hover{
+	text-decoration: none;
+	}
+img{
+	max-width: : 90%;
+	height: auto;
+	}
+.image2{
+	max-height: 100vh;
+    max-width: 100%;
+    z-index: 1;
+  
+	}
+.clippy2{   
+	min-height: 100%;
+    min-width: 100%;
+    background: white 0% 0% no-repeat padding-box;
+    clip-path: polygon(0 0, 21% 0, 87% 100%, 46% 100%, 0 35%);
+    z-index: 1;
+    opacity: 0.275;
+    position: absolute;
+    left:0;
+    margin: 0em;
+    padding: 0;
+	}
+	.fm {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+.number2{
+    text-align: right;
+    font-family: Etna;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.2;
+    font-size: 9em;
+    box-sizing: border-box;
+    position: relative;
+    left: -15px;
+    bottom: 0px;
+    margin:0px;
+    padding: 0px;
+	}
+
+	.page-footer {
+		color: white;
+	background-color: #0a0a0a;
+}
+
+.blogo {
+	width: 12%;
+}
+
+.mf {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 3%;
+}
+
+.lli {
+	background-color: transparent;
+}
+
+.nli {
+	margin-top: 4vh;
+	background-color: transparent;
+}
+
+.fli {
+	background-color: #0a0a0a;
+	color: white;
+}
+
+.fas {
+	margin-right: 10px;
+}
+
+.fa-link {
+	margin-top: 8%;
+}
+
+li {
+	margin-bottom: 4%;
+}
+
+.blogo {
+	margin-bottom: 3%;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 100px;
+  margin-left: 6%;
+}
+
+.ll{
+	margin-left: 20%;
+}
+
+
+
+/*-------- sponser css -------- */
+
+.sponsers1{
+	margin-right: 0;
+	margin-left: 0;
+    height: 100vh;
+    background: #37BBFF url('hero.png');
+    position: relative;
+    z-index: 1;
+}
+.logo1
+{
+    width: 90%;
+    margin: 0 auto;
+}
+.headsponsers1{
+    font-family: Etna;
+    font-size: 5em;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+
+.sp1{
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+}
+
+.explore1{
+    box-shadow: 0px 3px 54px #00000061;
+    background-color: white;
+    border-radius: 3em;
+    color: #37BBFF;
+    font-size: 2em;
+    font-family: Etna;
+    border-style: none;
+    padding: 0em 3em;
+    position: relative;
+    z-index: 1;
+    top: 20%;
+    left: 50%;
+    transform: translate(-70%, -25%);
+    margin: 80px 50px;
+}
+.number1
+{
+    text-align: right;
+    font-family: Etna;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.2;
+    font-size: 9em;
+    box-sizing: border-box;
+    position: absolute;
+    font-weight: bolder;
+    z-index: 1;
+    right: 0;
+    bottom:0;
+}
+
+
+.clippy1
+{   min-height: 100%;
+    min-width: 100%;
+    background: white 0% 0% no-repeat padding-box;
+   clip-path: polygon(46% 0, 87% 0, 21% 100%, 0% 100%, 0 67%, 29% 26%);
+    z-index: 2;
+    opacity: 0.275;
+    position: absolute;
+    top:0;
+    left: 0;
+    
+}
+
+}
+
+
+@media (max-width: 768px){
+@font-face{
+	font-family: Etna;
+	src:url("etna.otf");
+}
+@font-face{
+	font-family: Brandon Grotesque;
+	src:url("Brandon.otf");
+}
+
+	.goku {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.abtn {
+		font-size: 10px;
+	}
+
+#cpt123{
+	background-color: #d01f00;
+}
+	
+.thor2{
+	   background-color: #006FFF;
+	   width: 100%;
+	   margin: 0 auto;
+	   position: relative;
+	   z-index: 0;
+	}
+
+
+h1{
+	color: white;
+	text-align: center;
+	letter-spacing: 0px;
+	font-family: Etna;
+	z-index: -1;
+	font-size: 37px;
+	margin: 90px 0px 0px;
+	position: relative;
+	}
+p{
+	color: white;
+	font-size: 14px;
+	font-family: Brandon Grotesque;
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: justify;
+	margin: 40px 0px 110px;
+	
+
+	}
+button{
+	border-style: none;
+	background-color: white;
+	border-radius: 40px;
+	box-shadow: 0px 3px 18px #00000033;
+	opacity: 1;
+	overflow: auto;
+	z-index: 1;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	}
+
+a{
+	text-decoration: none;
+	border-radius: 40px;
+	font-size: 12px;
+	background-color: white;
+	color: black;
+	overflow: auto;
+	font-family: Etna;
+	src:url("etna.otf");
+	position: relative;
+	text-align: center;
+
+	}
+a:hover{
+	text-decoration: none;
+	}
+img{
+	max-width: : 90%;
+	height: auto;
+	}
+.image2{
+	max-height: 100vh;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    text-align: center;
+    margin:0 auto;
+    top: -250px;
+    left: 0px;
+  
+	}
+.clippy2{   
+	min-height: 100%;
+    min-width: 100%;
+    background: white 0% 0% no-repeat padding-box;
+    clip-path: polygon(0 0, 24% 0, 89% 100%, 46% 100%, 0 35%);
+    z-index: 2;
+    opacity: 0.275;
+    position: absolute;
+    left:0px;
+    top:0px;
+    margin: 0em;
+    padding: 0;
+    
+	}
+.number2{
+    text-align: right;
+    font-family: Etna;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.2;
+    font-size: 9em;
+    box-sizing: border-box;
+    position: relative;
+    top: -0.3em;
+    left: -15px;
+    margin:50px 0 0;
+    padding: 0px;
+	}
+
+	.page-footer{
+		color: white;
+		background-color: #0a0a0a;
+	}
+	.fli {
+	background-color: #0a0a0a;
+	color: white;
+	}
+
+	.mf {
+		margin-left: 0;
+	margin-right: 0;
+	}
+
+	.fm {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+
+	/*-------sponsers ---------*/
+
+	.sponsers1{
+    height: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    background: #37BBFF url('hero.png');
+    z-index: 1;
+}
+
+.headsponsers1{
+    width: 100%;
+    font-family: Etna;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 4em;
+    margin: 0.5em auto;
+}
+
+.sp1{
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+
+}
+
+.lp1{
+    position: relative;
+    left: 45%;
+}
+.explore1{
+    margin: 0px auto;
+    box-shadow: 0px 3px 54px #00000061;
+    background-color: white;
+    border-radius: 3em;
+    color: #37BBFF;
+    font-size: 2em;
+    font-family: Etna;
+    border-style: none;
+    position: relative;
+    padding: 0.5em 0.5em;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+.number1
+{
+    text-align: right;
+    font-family: Etna;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.3;
+    font-size: 6em;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: bolder;
+    z-index: 1;
+    width: 100%;
+}
+.image1{
+    position: absolute;
+    width: 100vw;
+  }
+.clippy1
+{   min-height: 100%;
+    min-width: 100%;
+    background: white 0% 0% no-repeat padding-box;
+   	clip-path: polygon(46% 0, 89% 0, 21% 100%, 0% 100%, 0 67%, 29% 26%);
+    z-index: 2;
+    opacity: 0.275;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+	
+ }
